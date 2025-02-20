@@ -22,6 +22,7 @@ describe("Hash Tables", () => {
 
       set.add([...item]);
 
+      expect(set.toString()).toBe(`HashSet(1) { ${item.join("_")} }`);
       expect(set.size).toBe(1);
       expect(set.has(item)).toBe(true);
 

@@ -39,4 +39,9 @@ export class HashSet<T = any> {
   get size(): number {
     return this._set.size;
   }
+
+  toString(): string {
+    const values = Array.from(this._set.values()).join(", ");
+    return `HashSet(${this.size}) { ${values} }`;
+  }
 }
