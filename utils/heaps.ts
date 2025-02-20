@@ -1,5 +1,5 @@
 export class Heap<T = any> {
-  private _heap: Array<T> = [];
+  private _heap: Array<T>;
   private _comparator: (a: T, b: T) => boolean;
 
   constructor({
@@ -7,7 +7,7 @@ export class Heap<T = any> {
     array,
   }: {
     /**
-     * @returns `true` when a should be `a` parent of `b`, otherwise - `false`
+     * @returns `true` when `a` should be the parent of `b`, otherwise - `false`
      */
     comparator?: (a: T, b: T) => boolean;
     array?: T[];
@@ -19,6 +19,8 @@ export class Heap<T = any> {
       for (let idx = Math.floor(this.length / 2) - 1; idx >= 0; idx--) {
         this.bubbleDown(idx);
       }
+    } else {
+      this._heap = [];
     }
   }
 

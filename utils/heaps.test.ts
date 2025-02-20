@@ -1,10 +1,13 @@
-import { faker } from "@faker-js/faker";
+import { simpleFaker } from "@faker-js/faker";
 import { beforeEach, describe, expect, test } from "vitest";
 import { Heap } from "./heaps";
 
 describe("Heaps", () => {
   const orderedItems = Array.from(new Array(10).keys());
-  const items = faker.helpers.arrayElements(orderedItems, orderedItems.length);
+  const items = simpleFaker.helpers.arrayElements(
+    orderedItems,
+    orderedItems.length
+  );
 
   describe("Heap", () => {
     const comparator = (a: number, b: number) => a > b;

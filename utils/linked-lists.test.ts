@@ -1,4 +1,4 @@
-import { faker } from "@faker-js/faker";
+import { simpleFaker } from "@faker-js/faker";
 import { beforeEach, describe, expect, test } from "vitest";
 import {
   createDoubleLinkedList,
@@ -9,9 +9,9 @@ import {
 
 describe("Linked Lists", () => {
   const numOfItems = 10;
-  const items = faker.helpers.arrayElements(
+  const items = simpleFaker.helpers.arrayElements(
     Array.from(new Array(numOfItems).keys()),
-    faker.number.int(numOfItems - 1)
+    simpleFaker.number.int(numOfItems - 1)
   );
 
   describe("createSingleLinkedList", () => {
