@@ -1,0 +1,18 @@
+{
+  "name": "dsa-solutions",
+  "version": "1.0.0",
+  "scripts": {
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jgaik/dsa-solutions.git"
+  },
+  "author": "Jakub Gaik",
+  "bugs": {
+    "url": "https://github.com/jgaik/dsa-solutions/issues"
+  },
+  "homepage": "https://github.com/jgaik/dsa-solutions#readme",
+  "devDependencies": {
+    "typescript": "^5.7.3"
+  }
+}
