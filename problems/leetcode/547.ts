@@ -1,6 +1,6 @@
 // https://leetcode.com/problems/number-of-provinces;
 
-export function solution(isConnected: number[][]): number {
+function solution(isConnected: number[][]): number {
   const n = isConnected.length;
   let provinces = 0;
 
@@ -24,3 +24,26 @@ export function solution(isConnected: number[][]): number {
 
   return provinces;
 }
+
+const cases: Array<
+  [ReturnType<typeof solution>, ...Parameters<typeof solution>]
+> = [
+  [
+    2,
+    [
+      [1, 1, 0],
+      [1, 1, 0],
+      [0, 0, 1],
+    ],
+  ],
+  [
+    3,
+    [
+      [1, 0, 0],
+      [0, 1, 0],
+      [0, 0, 1],
+    ],
+  ],
+];
+
+export const leet547 = { solution, cases };
