@@ -11,7 +11,7 @@ describe("Linked Lists", () => {
   const numOfItems = 10;
   const items = simpleFaker.helpers.arrayElements(
     Array.from(new Array(numOfItems).keys()),
-    simpleFaker.number.int(numOfItems - 1)
+    { min: 1, max: simpleFaker.number.int(numOfItems - 1) }
   );
 
   describe("createSingleLinkedList", () => {
