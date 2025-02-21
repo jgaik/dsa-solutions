@@ -1,6 +1,6 @@
 import { simpleFaker } from "@faker-js/faker";
 import { beforeEach, describe, expect, test } from "vitest";
-import { Queue } from "./queues";
+import { ListQueue, MapQueue } from "./queues";
 
 describe("Queues", () => {
   const numOfItems = 10;
@@ -9,11 +9,11 @@ describe("Queues", () => {
     simpleFaker.number.int(numOfItems - 1)
   );
 
-  describe("Queue", () => {
-    let queue: Queue;
+  describe.each([ListQueue, MapQueue])("%o", (obj) => {
+    let queue: ListQueue | MapQueue;
 
     beforeEach(() => {
-      queue = new Queue();
+      queue = new obj();
     });
 
     test("creates an empty list", () => {

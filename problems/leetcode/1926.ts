@@ -1,6 +1,6 @@
 // https://leetcode.com/problems/nearest-exit-from-entrance-in-maze
 
-import { HashSet, Queue } from "../../utils";
+import { ListQueue } from "../../utils";
 
 function solution(maze: string[][], entrance: [number, number]): number {
   const m = maze.length;
@@ -15,7 +15,7 @@ function solution(maze: string[][], entrance: [number, number]): number {
 
   maze[entrance[0]][entrance[1]] = "+";
 
-  const queue = new Queue<number[]>();
+  const queue = new ListQueue<number[]>();
   queue.enqueue([...entrance, 0]);
 
   while (queue.length > 0) {
