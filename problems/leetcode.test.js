@@ -7,7 +7,7 @@ describe.each(Object.keys(leetcode))(
     const { cases, solution } = leetcode[key];
 
     test.each(cases)("passes case #%#", (result, ...inputs) => {
-      expect(solution(...inputs)).toBe(result);
+      expect(solution(...inputs)).toEqual(result);
     });
   }
 );
