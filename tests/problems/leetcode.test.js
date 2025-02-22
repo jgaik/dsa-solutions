@@ -1,4 +1,4 @@
-import { leetcode } from "./leetcode";
+import { leetcode } from "../../src";
 import { describe, expect, test } from "vitest";
 
 describe.each(Object.keys(leetcode))(

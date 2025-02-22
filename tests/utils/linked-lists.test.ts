@@ -5,7 +5,7 @@ import {
   createSingleLinkedList,
   DoubleLinkedListNode,
   SingleLinkedListNode,
-} from "./linked-lists";
+} from "../../src";
 
 describe("Linked Lists", () => {
   const numOfItems = 10;

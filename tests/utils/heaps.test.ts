@@ -1,6 +1,6 @@
 import { simpleFaker } from "@faker-js/faker";
 import { beforeEach, describe, expect, test } from "vitest";
-import { Heap } from "./heaps";
+import { Heap } from "../../src";
 
 describe("Heaps", () => {
   const orderedItems = Array.from(new Array(10).keys());

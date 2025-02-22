@@ -1,6 +1,6 @@
 import { simpleFaker } from "@faker-js/faker";
 import { beforeEach, describe, expect, test } from "vitest";
-import { ListQueue, MapQueue } from "./queues";
+import { ListQueue, MapQueue } from "../../src";
 
 describe("Queues", () => {
   const numOfItems = 10;

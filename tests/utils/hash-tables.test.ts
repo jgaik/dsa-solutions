@@ -1,6 +1,6 @@
 import { simpleFaker } from "@faker-js/faker";
 import { describe, expect, test } from "vitest";
-import { HashMap, HashSet } from "./hash-tables";
+import { HashMap, HashSet } from "../../src";
 
 describe("Hash Tables", () => {
   type KeyType = [string, number];
