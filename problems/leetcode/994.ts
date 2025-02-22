@@ -1,4 +1,4 @@
-// https://leetcode.com/problems/rotating-oranges
+// https://leetcode.com/problems/rotting-oranges
 
 import { MapQueue } from "../../utils";
 
