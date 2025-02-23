@@ -1,2 +1,2 @@
-export * from "./problems";
+export * from "./solutions";
 export * from "./utils";

@@ -2,6 +2,7 @@
   "name": "dsa-solutions",
   "version": "1.0.0",
   "scripts": {
+    "build": "ts-node scripts/build.ts",
     "test": "vitest"
   },
   "repository": {
