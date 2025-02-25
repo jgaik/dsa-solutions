@@ -1,11 +1,7 @@
 import { simpleFaker } from "@faker-js/faker";
 import { beforeEach, describe, expect, test } from "vitest";
-import {
-  createDoubleLinkedList,
-  createSingleLinkedList,
-  DoubleLinkedListNode,
-  SingleLinkedListNode,
-} from "../../src";
+import { SingleLinkedListNode } from "../../src/utils/linked-lists/single-linked-list";
+import { DoubleLinkedListNode } from "../../src/utils/linked-lists/double-linked-list";
 
 describe("Linked Lists", () => {
   const numOfItems = 10;
@@ -18,7 +14,7 @@ describe("Linked Lists", () => {
     let root: SingleLinkedListNode | null = null;
 
     beforeEach(() => {
-      root = createSingleLinkedList(items);
+      root = SingleLinkedListNode.createSingleLinkedList(items);
     });
 
     test("returns a root node correctly pointing to the items", () => {
@@ -41,7 +37,7 @@ describe("Linked Lists", () => {
       tail: DoubleLinkedListNode | null = null;
 
     beforeEach(() => {
-      [head, tail] = createDoubleLinkedList(items);
+      [head, tail] = DoubleLinkedListNode.createDoubleLinkedList(items);
     });
 
     test("returns a head node correctly pointing to the following items", () => {

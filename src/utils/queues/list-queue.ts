@@ -1,4 +1,4 @@
-import { createDoubleLinkedList, DoubleLinkedListNode } from "./linked-lists";
+import { DoubleLinkedListNode } from "../linked-lists/double-linked-list";
 
 export class ListQueue<T = any> {
   private _head: DoubleLinkedListNode<T | null>;
@@ -6,7 +6,8 @@ export class ListQueue<T = any> {
   private _length = 0;
 
   constructor() {
-    [this._head, this._tail] = createDoubleLinkedList<T | null>([null, null]);
+    [this._head, this._tail] =
+      DoubleLinkedListNode.createDoubleLinkedList<T | null>([null, null]);
   }
 
   enqueue(item: T) {
@@ -40,29 +41,5 @@ export class ListQueue<T = any> {
 
   get length() {
     return this._length;
-  }
-}
-
-export class MapQueue<T = any> {
-  private _headIdx = 0;
-  private _tailIdx = 0;
-  private _map = new Map<number, T>();
-
-  enqueue(item: T) {
-    this._map.set(this._tailIdx++, item);
-  }
-
-  dequeue(): T | null {
-    if (this.length === 0) return null;
-
-    const out = this._map.get(this._headIdx);
-    if (out === undefined) throw new Error("Incorrectly indexed map");
-
-    this._map.delete(this._headIdx++);
-    return out;
-  }
-
-  get length() {
-    return this._map.size;
   }
 }

@@ -1,6 +1,6 @@
 // https://leetcode.com/problems/nearest-exit-from-entrance-in-maze
 
-import { ListQueue } from "../../utils";
+import { ListQueue } from "../../utils/queues/list-queue";
 
 function solution(maze: string[][], entrance: [number, number]): number {
   const m = maze.length;

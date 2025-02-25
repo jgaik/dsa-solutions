@@ -13,7 +13,7 @@
   "bugs": {
     "url": "https://github.com/jgaik/dsa-solutions/issues"
   },
-  "homepage": "https://github.com/jgaik/dsa-solutions#readme",
+  "homepage": "https://jgaik.github.io/dsa-solutions",
   "devDependencies": {
     "@faker-js/faker": "^9.5.0",
     "ts-node": "^10.9.2",

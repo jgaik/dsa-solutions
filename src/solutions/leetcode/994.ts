@@ -1,6 +1,6 @@
 // https://leetcode.com/problems/rotting-oranges
 
-import { MapQueue } from "../../utils";
+import { MapQueue } from "../../utils/queues/map-queue";
 
 function solution(grid: number[][]): number {
   let freshOranges = 0;
