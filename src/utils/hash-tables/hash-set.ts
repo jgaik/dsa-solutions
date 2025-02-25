@@ -1,5 +1,5 @@
 export class HashSet<T = any> {
-  private _set;
+  private _set: Set<string>;
 
   constructor(
     private _hashFunction: (key: T) => string,
