@@ -35,13 +35,16 @@ class TemplateFiller {
     const imports = fileContent
       .split("\n")
       .filter((line) => line.startsWith("import"))
-      .map(
-        (line) =>
+      .map((line) => {
+        const lineParts =
           line
             .match(/"([^"]+)"/)?.[1]
             ?.replace(/\.\.\//g, "")
-            .split("/") ?? []
-      )
+            .split("/") ?? [];
+
+        if (lineParts[0] !== "utils") lineParts.unshift("utils");
+        return lineParts;
+      })
       .map(
         (nameParts) =>
           `<li><a href=${fileNamePartsToHtmlPath(nameParts)}>${toLabelCase(
