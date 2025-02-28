@@ -4,6 +4,7 @@ import { leet547 } from "../../src/solutions/leetcode/547";
 import { leet994 } from "../../src/solutions/leetcode/994";
 import { leet1466 } from "../../src/solutions/leetcode/1466";
 import { leet1926 } from "../../src/solutions/leetcode/1926";
+import { leet2542 } from "../../src/solutions/leetcode/2542";
 
 const leetcode = {
   399: leet399,
@@ -11,6 +12,7 @@ const leetcode = {
   994: leet994,
   1466: leet1466,
   1926: leet1926,
+  2642: leet2542,
 };
 
 describe.each(Object.keys(leetcode))("Problem #%s", (key) => {
