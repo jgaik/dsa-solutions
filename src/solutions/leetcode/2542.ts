@@ -16,7 +16,7 @@ function solution(nums1: number[], nums2: number[], k: number): number {
     sum += nums1[indices[idx]];
 
     if (heap.length > k) {
-      sum -= heap.pop()!;
+      sum -= heap.pop();
     }
     if (heap.length === k) {
       out = Math.max(out, sum * nums2[indices[idx]]);

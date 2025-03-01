@@ -29,10 +29,11 @@ export class Heap<T = any> {
     this.bubbleUp();
   }
 
-  pop(): T | null {
+  pop(): T {
     const last = this._heap.pop();
 
-    if (last === undefined) return null;
+    if (last === undefined)
+      throw new Error("Attempted Heap.pop() with 0-length");
 
     if (this.length === 0) return last;
 
@@ -51,7 +52,7 @@ export class Heap<T = any> {
   }
 
   toString(): string {
-    return this._heap.toString();
+    return JSON.stringify(this._heap);
   }
 
   private bubbleUp() {
