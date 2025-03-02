@@ -6,8 +6,10 @@ import { leet1466 } from "../../src/solutions/leetcode/1466";
 import { leet1926 } from "../../src/solutions/leetcode/1926";
 import { leet2542 } from "../../src/solutions/leetcode/2542";
 import { leet2462 } from "../../src/solutions/leetcode/2462";
+import { leet200 } from "../../src/solutions/leetcode/200";
 
 const leetcode = {
+  200: leet200,
   399: leet399,
   547: leet547,
   994: leet994,
