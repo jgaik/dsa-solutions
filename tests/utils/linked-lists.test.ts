@@ -1,20 +1,20 @@
 import { simpleFaker } from "@faker-js/faker";
 import { beforeEach, describe, expect, test } from "vitest";
-import { SingleLinkedListNode } from "../../src/utils/linked-lists/single-linked-list";
-import { DoubleLinkedListNode } from "../../src/utils/linked-lists/double-linked-list";
+import { SinglyLinkedListNode } from "../../src/utils/linked-lists/singly-linked-list";
+import { DoublyLinkedListNode } from "../../src/utils/linked-lists/doubly-linked-list";
 
 describe("Linked Lists", () => {
   const numOfItems = 10;
   const items = simpleFaker.helpers.arrayElements(
     Array.from(new Array(numOfItems).keys()),
-    { min: 1, max: simpleFaker.number.int(numOfItems - 1) }
+    { min: 1, max: simpleFaker.number.int({ min: 1, max: numOfItems - 1 }) }
   );
 
   describe("createSingleLinkedList", () => {
-    let root: SingleLinkedListNode | null = null;
+    let root: SinglyLinkedListNode | null = null;
 
     beforeEach(() => {
-      root = SingleLinkedListNode.createSingleLinkedList(items);
+      root = SinglyLinkedListNode.createList(items);
     });
 
     test("returns a root node correctly pointing to the items", () => {
@@ -33,11 +33,11 @@ describe("Linked Lists", () => {
   });
 
   describe("createDoubleLinkedList", () => {
-    let head: DoubleLinkedListNode | null = null,
-      tail: DoubleLinkedListNode | null = null;
+    let head: DoublyLinkedListNode | null = null,
+      tail: DoublyLinkedListNode | null = null;
 
     beforeEach(() => {
-      [head, tail] = DoubleLinkedListNode.createDoubleLinkedList(items);
+      [head, tail] = DoublyLinkedListNode.createList(items);
     });
 
     test("returns a head node correctly pointing to the following items", () => {

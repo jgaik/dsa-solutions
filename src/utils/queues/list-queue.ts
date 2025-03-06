@@ -1,17 +1,19 @@
-import { DoubleLinkedListNode } from "../linked-lists/double-linked-list";
+import { DoublyLinkedListNode } from "../linked-lists/doubly-linked-list";
 
 export class ListQueue<T = any> {
-  private _head: DoubleLinkedListNode<T | null>;
-  private _tail: DoubleLinkedListNode<T | null>;
+  private _head: DoublyLinkedListNode<T | null>;
+  private _tail: DoublyLinkedListNode<T | null>;
   private _length = 0;
 
   constructor() {
-    [this._head, this._tail] =
-      DoubleLinkedListNode.createDoubleLinkedList<T | null>([null, null]);
+    [this._head, this._tail] = DoublyLinkedListNode.createList<T | null>([
+      null,
+      null,
+    ]);
   }
 
   enqueue(item: T) {
-    const newNode = new DoubleLinkedListNode<T | null>(
+    const newNode = new DoublyLinkedListNode<T | null>(
       item,
       this._tail.previous,
       this._tail
