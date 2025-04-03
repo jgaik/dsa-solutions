@@ -1,9 +1,11 @@
 import { describe, expect, test } from "vitest";
+import { leet141 } from "../../src/solutions/leetcode/141";
 import { leet1466 } from "../../src/solutions/leetcode/1466";
 import { leet17 } from "../../src/solutions/leetcode/17";
 import { leet19 } from "../../src/solutions/leetcode/19";
 import { leet1926 } from "../../src/solutions/leetcode/1926";
 import { leet200 } from "../../src/solutions/leetcode/200";
+import { leet202 } from "../../src/solutions/leetcode/202";
 import { leet22 } from "../../src/solutions/leetcode/22";
 import { leet24 } from "../../src/solutions/leetcode/24";
 import { leet2462 } from "../../src/solutions/leetcode/2462";
@@ -17,7 +19,9 @@ const leetcode = {
   19: leet19,
   22: leet22,
   24: leet24,
+  141: leet141,
   200: leet200,
+  202: leet202,
   399: leet399,
   547: leet547,
   994: leet994,

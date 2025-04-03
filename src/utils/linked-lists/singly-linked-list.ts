@@ -24,18 +24,25 @@ export class SinglyLinkedListNode<T = any> {
     return out;
   }
 
-  static createList<T>(items: T[]): SinglyLinkedListNode<T> {
+  static createList<T>(
+    items: T[],
+    cycleIndex?: number
+  ): SinglyLinkedListNode<T> {
     if (items.length === 0)
       throw new Error("Empty list cannot be a linked list");
 
     const root = new SinglyLinkedListNode<T>(items[0]);
 
-    let follow = root;
+    let follow = root,
+      cycleNode = root;
     for (let idx = 1; idx < items.length; idx++) {
       const next = new SinglyLinkedListNode<T>(items[idx]);
+      if (idx === cycleIndex) cycleNode = next;
       follow.next = next;
       follow = follow.next;
     }
+
+    if (cycleIndex !== undefined) follow.next = cycleNode;
 
     return root;
   }
