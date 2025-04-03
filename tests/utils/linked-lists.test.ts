@@ -10,7 +10,7 @@ describe("Linked Lists", () => {
     { min: 1, max: simpleFaker.number.int({ min: 1, max: numOfItems - 1 }) }
   );
 
-  describe("createSingleLinkedList", () => {
+  describe("SinglyLinkedListNode.createList", () => {
     let root: SinglyLinkedListNode | null = null;
 
     beforeEach(() => {
@@ -32,7 +32,7 @@ describe("Linked Lists", () => {
     });
   });
 
-  describe("createDoubleLinkedList", () => {
+  describe("DoublyLinkedListNode.createList", () => {
     let head: DoublyLinkedListNode | null = null,
       tail: DoublyLinkedListNode | null = null;
 

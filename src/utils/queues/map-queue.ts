@@ -3,8 +3,10 @@ export class MapQueue<T = any> {
   private _tailIdx = 0;
   private _map = new Map<number, T>();
 
-  enqueue(item: T) {
-    this._map.set(this._tailIdx++, item);
+  enqueue(...items: T[]) {
+    items.forEach((item) => {
+      this._map.set(this._tailIdx++, item);
+    });
   }
 
   dequeue(): T | null {

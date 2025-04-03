@@ -22,17 +22,13 @@ describe("Queues", () => {
     });
 
     test("allows enqueuing items", () => {
-      items.forEach((item) => {
-        queue.enqueue(item);
-      });
+      queue.enqueue(...items);
 
       expect(queue).toHaveLength(items.length);
     });
 
     test("allows dequeueing items", () => {
-      items.forEach((item) => {
-        queue.enqueue(item);
-      });
+      queue.enqueue(...items);
 
       let idx = 0;
       while (queue.length > 0) {

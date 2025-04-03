@@ -12,19 +12,21 @@ export class ListQueue<T = any> {
     ]);
   }
 
-  enqueue(item: T) {
-    const newNode = new DoublyLinkedListNode<T | null>(
-      item,
-      this._tail.previous,
-      this._tail
-    );
+  enqueue(...items: T[]) {
+    items.forEach((item) => {
+      const newNode = new DoublyLinkedListNode<T | null>(
+        item,
+        this._tail.previous,
+        this._tail
+      );
 
-    if (!this._tail.previous)
-      throw new Error("Incorrectly linked list while enqueue");
+      if (!this._tail.previous)
+        throw new Error("Incorrectly linked list while enqueue");
 
-    this._tail.previous.next = newNode;
-    this._tail.previous = newNode;
-    this._length++;
+      this._tail.previous.next = newNode;
+      this._tail.previous = newNode;
+      this._length++;
+    });
   }
 
   dequeue(): T | null {
