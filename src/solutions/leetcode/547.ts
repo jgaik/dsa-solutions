@@ -1,4 +1,4 @@
-// https://leetcode.com/problems/number-of-provinces;
+// https://leetcode.com/problems/number-of-provinces
 
 function solution(isConnected: number[][]): number {
   const n = isConnected.length;
