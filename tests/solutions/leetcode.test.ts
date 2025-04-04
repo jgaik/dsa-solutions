@@ -11,6 +11,7 @@ import { leet24 } from "../../src/solutions/leetcode/24";
 import { leet2462 } from "../../src/solutions/leetcode/2462";
 import { leet2542 } from "../../src/solutions/leetcode/2542";
 import { leet399 } from "../../src/solutions/leetcode/399";
+import { leet450 } from "../../src/solutions/leetcode/450";
 import { leet547 } from "../../src/solutions/leetcode/547";
 import { leet994 } from "../../src/solutions/leetcode/994";
 
@@ -23,6 +24,7 @@ const leetcode = {
   200: leet200,
   202: leet202,
   399: leet399,
+  450: leet450,
   547: leet547,
   994: leet994,
   1466: leet1466,

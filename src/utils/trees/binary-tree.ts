@@ -62,11 +62,11 @@ export class BinaryTreeNode<T = any> {
       const [left, right = null] = [items[idx], items[idx + 1]];
 
       if (left !== null) {
-        node.left = new BinaryTreeNode(left);
+        node.left = new BinaryTreeNode<T>(left);
         queue.enqueue(node.left);
       }
       if (right !== null) {
-        node.right = new BinaryTreeNode(right);
+        node.right = new BinaryTreeNode<T>(right);
         queue.enqueue(node.right);
       }
 
