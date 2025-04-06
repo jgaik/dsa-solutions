@@ -14,6 +14,7 @@ import { leet2542 } from "../../src/solutions/leetcode/2542";
 import { leet287 } from "../../src/solutions/leetcode/287";
 import { leet36 } from "../../src/solutions/leetcode/36";
 import { leet399 } from "../../src/solutions/leetcode/399";
+import { leet42 } from "../../src/solutions/leetcode/42";
 import { leet450 } from "../../src/solutions/leetcode/450";
 import { leet49 } from "../../src/solutions/leetcode/49";
 import { leet547 } from "../../src/solutions/leetcode/547";
@@ -25,6 +26,7 @@ const leetcode = {
   22: leet22,
   24: leet24,
   36: leet36,
+  42: leet42,
   49: leet49,
   128: leet128,
   141: leet141,
