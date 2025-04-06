@@ -1,4 +1,5 @@
 import { describe, expect, test } from "vitest";
+import { leet128 } from "../../src/solutions/leetcode/128";
 import { leet141 } from "../../src/solutions/leetcode/141";
 import { leet1466 } from "../../src/solutions/leetcode/1466";
 import { leet17 } from "../../src/solutions/leetcode/17";
@@ -14,9 +15,9 @@ import { leet287 } from "../../src/solutions/leetcode/287";
 import { leet36 } from "../../src/solutions/leetcode/36";
 import { leet399 } from "../../src/solutions/leetcode/399";
 import { leet450 } from "../../src/solutions/leetcode/450";
+import { leet49 } from "../../src/solutions/leetcode/49";
 import { leet547 } from "../../src/solutions/leetcode/547";
 import { leet994 } from "../../src/solutions/leetcode/994";
-import { leet49 } from "../../src/solutions/leetcode/49";
 
 const leetcode = {
   17: leet17,
@@ -25,6 +26,7 @@ const leetcode = {
   24: leet24,
   36: leet36,
   49: leet49,
+  128: leet128,
   141: leet141,
   200: leet200,
   202: leet202,
